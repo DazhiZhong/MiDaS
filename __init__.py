@@ -1,1 +1,1 @@
-from midasrun import MiDasRun
+from .midasrun import MiDasRun
