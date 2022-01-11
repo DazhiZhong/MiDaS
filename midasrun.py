@@ -3,15 +3,15 @@
 import os
 import glob
 import torch
-import utils
+from . import utils
 import cv2
 import argparse
 
 from torchvision.transforms import Compose
-from midas.dpt_depth import DPTDepthModel
-from midas.midas_net import MidasNet
-from midas.midas_net_custom import MidasNet_small
-from midas.transforms import Resize, NormalizeImage, PrepareForNet
+from .midas.dpt_depth import DPTDepthModel
+from .midas.midas_net import MidasNet
+from .midas.midas_net_custom import MidasNet_small
+from .midas.transforms import Resize, NormalizeImage, PrepareForNet
 
 class MiDasRun():
     def __init__(self, model_path, model_type, optimize=True):
